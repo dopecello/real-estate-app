@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate App Group 10</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script defer src="./assets/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Real Estate App</h1>
+            <h4> Discover latest properties for sale anywhere in the USA.</h4>
+        </header>
+        <form>
+            <div class="searchCity">
+                <input type="text" placeholder="Enter the location for properties eg: Miami">
+            </div>
+            <div class="relevance">
+                <label>Sort By</label>
+                <select name="relevance" id="relevance">
+                    <option value="relevance">relevance</option>
+                    <option value="newest">newest</option>
+                    <option value="price-high">price-high</option>
+                    <option value="price-low">price-low</option>
+                    <option value="price-reduced-date">price-reduced-date</option>
+                    <option value="sqft-high">sqft-high</option>
+                    <option value="open-house">open-house</option>
+                    <option value="photos">photos</option>
+                </select>
+            </div>
+            <div class="minBeds">
+                <label>Minimum Beds</label>
+                <input type="number" placeholder="1">
+            </div>
+            <button class="searchBar" type="submit">Search</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
