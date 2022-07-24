@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+  } 
+ .container{
+    background-color:rgba(29,29,32) ;
+    height: 1200px;
+  }
+  
+  /* HEADER START */
+  header {
+      background-color: rgba(29,29,32);
+    }
+    
+  header h1 {
+      padding-top: 80px ;
+      padding-bottom: 20px;
+      text-align: center;
+      font-size: 70px;
+      color: white ;
+      font-family: Bayon;
+     }
+
+ .text-active{
+        color: green;
+     }
+
+  header h4 {
+        font-size: 30px;
+        text-align: center;
+        color: green ;
+      }
+/* HEADER END */
+
+
+
+ /* SEARCH CITY SECTION STARTS*/
+.searchCity{
+    text-align: center;
+    color: white;
+  }
+
+.searchCity input {
+    width: 40%;
+    border: none;
+    background: white;
+    color: rgba(29,29,32);
+    text-align: left;
+    padding: 15px 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 100px;
+  }
+  /* SEARCH CITY SECTION ENDS*/
+
+
+
+
+ /* SORT BY  SECTION STARTS*/
+.relevance{
+    text-align: center;
+    color: white;
+}
+
+
+/* SORT BY SECTION ENDS*/
+
+
+
+/*BEDS QUANTITY SECTION STARTS*/
+.minBeds{
+    text-align: center;
+    color: white; 
+}
+
+
+ button {
+    text-align: center;
+    color: white;
+
+}
+
+.minBeds button {
+    width: 40%;
+    border: none;
+    background: green ;
+    color: rgba(29,29,32);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+.minBeds button:hover {
+    color:white;
+    background: rgb(93, 113, 93) ;
+}
+/*BEDS QUANTITY SECTION ENDS*/
+
+
+
+/*MADE BY SECTION STARTS*/
+.Team{
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white; 
+    text-align: center;
+    padding-top: 70px;
+}
+/*MADE BY SECTION ENDS*/
+
+
