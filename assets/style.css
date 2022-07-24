@@ -63,8 +63,20 @@
     text-align: center;
     color: white;
 }
-
-
+.relevance select{
+    width: 15%;
+    border: none;
+    background: white;
+    color: rgba(29,29,32);
+    text-align: left ;
+    padding: 14px 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 100px;  
+}
+ 
 /* SORT BY SECTION ENDS*/
 
 
@@ -73,6 +85,21 @@
 .minBeds{
     text-align: center;
     color: white; 
+}
+
+
+.minBeds input {
+    width: 15%;
+    border: none;
+    background: white;
+    color: rgba(29,29,32);
+    text-align: left;
+    padding: 14px 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 100px;
 }
 
 
@@ -93,6 +120,7 @@
     font-family: sans-serif;
     font-weight: bold;
     border-radius: 10px;
+    margin-left: 120px;
   }
 
 .minBeds button:hover {
