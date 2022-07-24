@@ -1,7 +1,8 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-  } 
+}
  .container{
     background-color:rgba(29,29,32) ;
     height: 1200px;
@@ -13,8 +14,7 @@
     }
     
   header h1 {
-      padding-top: 80px ;
-      padding-bottom: 20px;
+      padding-top: 80px;
       text-align: center;
       font-size: 70px;
       color: white ;
@@ -26,6 +26,7 @@
      }
 
   header h4 {
+        padding-top: 24px;
         font-size: 30px;
         text-align: center;
         color: green ;
@@ -41,6 +42,7 @@
   }
 
 .searchCity input {
+    cursor:text;
     width: 40%;
     border: none;
     background: white;
@@ -64,17 +66,18 @@
     color: white;
 }
 .relevance select{
+    cursor: pointer;
     width: 15%;
     border: none;
     background: white;
     color: rgba(29,29,32);
     text-align: left ;
-    padding: 14px 0;
+    padding: 10px 0;
     font-size: 16px;
     font-family: sans-serif;
     font-weight: bold;
     border-radius: 10px;
-    margin-top: 100px;  
+    margin-top: 40px;  
 }
  
 /* SORT BY SECTION ENDS*/
@@ -89,6 +92,7 @@
 
 
 .minBeds input {
+    cursor: text;
     width: 15%;
     border: none;
     background: white;
@@ -99,7 +103,7 @@
     font-family: sans-serif;
     font-weight: bold;
     border-radius: 10px;
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 
@@ -124,6 +128,7 @@
   }
 
 .minBeds button:hover {
+    cursor: pointer ;
     color:white;
     background: rgb(93, 113, 93) ;
 }
