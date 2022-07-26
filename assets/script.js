@@ -10,26 +10,29 @@ const options = {
 	}
 };
 
-let stateCode = 'FL'
-let city = 'Miami'
-let beds = '1'
+let stateCode = document.getElementById("stateDropDown").value
+let city = document.getElementById("searchCity").value
+let beds = document.getElementById("minBedsSelect").value
 
 
 	
-const fetchAPIData = fetch(
-	"https://realty-in-us.p.rapidapi.com/properties/list-for-sale?" +
-	'state_code=' + 
-	 stateCode + 
-	 '&city=' + 
-	 city + 
-	 '&limit=200&offset=0&sort=relevance' + 
-	 '&beds_min=' + 
-	 beds
-	 , options)
-		.then(response => response.json())
-		.then(response => console.log(response))
-		.catch(err => console.error(err))
-	;
+document.getElementById("searchBtn").addEventListener("click", getAPIData())
+
+function getAPIData () {
+	fetch(
+		"https://realty-in-us.p.rapidapi.com/properties/list-for-sale?" +
+		'state_code=' + 
+		 stateCode + 
+		 '&city=' + 
+		 city + 
+		 '&limit=50&offset=0&sort=relevance' + 
+		 '&beds_min=' + 
+		 beds
+		 , options)
+			.then(response => response.json())
+			.then(response => console.log(response))
+			.catch(err => console.error(err));
+}
 	
  
 
