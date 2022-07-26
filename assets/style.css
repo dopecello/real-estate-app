@@ -137,7 +137,16 @@ header h4 {
 
 /* SEARCH CITY SECTION ENDS*/
 
+.stateSelect {
+display: flex;
+justify-content: center;
+color: white;
+font-family: sans-serif;
+}
 
+.stateSelect select {
+  margin-left: 10px;
+}
 
 
 /* SORT BY  SECTION STARTS*/
@@ -266,6 +275,11 @@ button:hover {
 }
 
 /*BEDS QUANTITY SECTION ENDS*/
+
+/* CARDS SECTION START */
+.card {
+  color: white;
+}
 
 
 
