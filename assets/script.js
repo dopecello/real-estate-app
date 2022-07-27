@@ -16,9 +16,9 @@ let beds = document.getElementById("minBedsSelect").value
 
 
 	
-document.getElementById("searchBtn").addEventListener("click", getAPIData())
+// document.getElementById("searchBtn").addEventListener("click", getAPIData())
 
-function getAPIData () {
+// function getAPIData() {
 	fetch(
 		"https://realty-in-us.p.rapidapi.com/properties/list-for-sale?" +
 		'state_code=' + 
@@ -32,7 +32,7 @@ function getAPIData () {
 			.then(response => response.json())
 			.then(response => console.log(response))
 			.catch(err => console.error(err));
-}
+// }
 	
  
 
