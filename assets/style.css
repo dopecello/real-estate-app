@@ -1,4 +1,38 @@
 * {
+<<<<<<< HEAD
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ .container{
+    background-color:rgba(29,29,32) ;
+    height: 1200px;
+  }
+  
+  /* HEADER START */
+  header {
+      background-color: rgba(29,29,32);
+    }
+    
+  header h1 {
+      padding-top: 80px;
+      text-align: center;
+      font-size: 70px;
+      color: white ;
+      font-family: Bayon;
+     }
+
+ .text-active{
+        color: green;
+     }
+
+  header h4 {
+        padding-top: 24px;
+        font-size: 30px;
+        text-align: center;
+        color: green ;
+      }
+=======
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -35,6 +69,7 @@ header h4 {
 
 }
 
+>>>>>>> 5e9c542034ef10506842fbebcb9e008d8371638e
 /* HEADER END */
 
 
@@ -46,6 +81,46 @@ header h4 {
 }
 
 .searchCity input {
+<<<<<<< HEAD
+    cursor:text;
+    width: 40%;
+    border: none;
+    background: white;
+    color: rgba(29,29,32);
+    text-align: left;
+    padding: 15px 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 100px;
+  }
+  /* SEARCH CITY SECTION ENDS*/
+
+
+
+
+ /* SORT BY  SECTION STARTS*/
+.relevance{
+    text-align: center;
+    color: white;
+}
+.relevance select{
+    cursor: pointer;
+    width: 15%;
+    border: none;
+    background: white;
+    color: rgba(29,29,32);
+    text-align: left ;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 40px;  
+}
+ 
+=======
   width: 40%;
   border: none;
   background: white;
@@ -62,7 +137,16 @@ header h4 {
 
 /* SEARCH CITY SECTION ENDS*/
 
+.stateSelect {
+display: flex;
+justify-content: center;
+color: white;
+font-family: sans-serif;
+}
 
+.stateSelect select {
+  margin-left: 10px;
+}
 
 
 /* SORT BY  SECTION STARTS*/
@@ -93,6 +177,7 @@ header h4 {
   margin-top: 10px;
 }
 
+>>>>>>> 5e9c542034ef10506842fbebcb9e008d8371638e
 /* SORT BY SECTION ENDS*/
 
 
@@ -115,6 +200,47 @@ header h4 {
 
 
 .minBeds input {
+<<<<<<< HEAD
+    cursor: text;
+    width: 15%;
+    border: none;
+    background: white;
+    color: rgba(29,29,32);
+    text-align: left;
+    padding: 14px 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+
+ button {
+    text-align: center;
+    color: white;
+
+}
+
+.minBeds button {
+    width: 40%;
+    border: none;
+    background: green ;
+    color: rgba(29,29,32);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 120px;
+  }
+
+.minBeds button:hover {
+    cursor: pointer ;
+    color:white;
+    background: rgb(93, 113, 93) ;
+=======
   width: 15%;
   border: none;
   background: white;
@@ -126,6 +252,7 @@ header h4 {
   font-weight: bold;
   border-radius: 10px;
   margin-top: 10px;
+>>>>>>> 5e9c542034ef10506842fbebcb9e008d8371638e
 }
 
 button {
@@ -148,6 +275,11 @@ button:hover {
 }
 
 /*BEDS QUANTITY SECTION ENDS*/
+
+/* CARDS SECTION START */
+.card {
+  color: white;
+}
 
 
 
