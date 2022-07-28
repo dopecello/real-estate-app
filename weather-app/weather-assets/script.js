@@ -1,5 +1,5 @@
 var theApi = "58e71a710a7324e282388fb23677dc25";
-var theApi2 = "04c2d9338307fab8303705523902071a";
+// var theApi2 = "04c2d9338307fab8303705523902071a";
 
 var fetchgetWeather = function (city) {
   fetch(
@@ -32,20 +32,20 @@ var findcity = function () {
   
 };
 
-var fetchGet5Day = function(city){
-fetch(
-    "https://api.openweathermap.org/data/2.5/forecast?q="
-    + city 
-    + "&units=imperial&appid="
-    + theApi2    
-)
-.then((response) => response.json())
-.then((data) => display5Day(data));
-}
+// var fetchGet5Day = function(city){
+// fetch(
+//     "https://api.openweathermap.org/data/2.5/forecast?q="
+//     + city 
+//     + "&units=imperial&appid="
+//     + theApi2    
+// )
+// .then((response) => response.json())
+// .then((data) => display5Day(data));
+// }
 
-var display5Day = function (data){
-console.log(data)
-}
+// var display5Day = function (data){
+// console.log(data)
+// }
 
 
 document.querySelector(".searchBtn").addEventListener("click", function () {

@@ -8,6 +8,8 @@
     <title>Real Estate App Group 10</title>
     <!-- <link rel="shortcut icon" href="assets/images/faviconicon.ico"> -->
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  
     <script defer src="./assets/script.js"></script>
 </head>
 
@@ -91,60 +93,14 @@
         </form>
 
 
-            
         
 
 
         <!-- Dynamically created elements here -->
 
-
-
-        <div class="cardContainer">
-
-
-
-
-            <div class="card">
-                <!-- photo is a part of the object we can use to automatically input -->
-                <img src="https://ap.rdcpix.com/1f9cac579aa90d802977298da5bdfb69l-m2938841960x.jpg" alt="property-image">
-                <!-- anything in quotes we can use the object to automatically input -->
-                <p><span id="price">"310k" </span><span id="prop-type">"single_family"</span></p>
-                <p><span id="bath">"x" Baths </span>-<span id="bed"> "x" Beds</span></p>
-                <p id="address">"Address"</p>
-                <br />
-                <!-- how do we ge tthe URL for this.. otherwise prob delete -->
-                <a href="*" id="details">Details</a>
-            </div>
-            <div class="card">
-                <!-- photo is a part of the object we can use to automatically input -->
-                <img src="https://ap.rdcpix.com/1f9cac579aa90d802977298da5bdfb69l-m2938841960x.jpg" alt="property-image">
-                <!-- anything in quotes we can use the object to automatically input -->
-                <p><span id="price">"310k" </span><span id="prop-type">"single_family"</span></p>
-                <p><span id="bath">"x" Baths </span>-<span id="bed"> "x" Beds</span></p>
-                <p id="address">"Address"</p>
-                <br />
-                <!-- how do we ge tthe URL for this.. otherwise prob delete -->
-                <a href="*" id="details">Details</a>
-            </div>
-            <div class="card">
-                <!-- photo is a part of the object we can use to automatically input -->
-                <img src="https://ap.rdcpix.com/1f9cac579aa90d802977298da5bdfb69l-m2938841960x.jpg" alt="property-image">
-                <!-- anything in quotes we can use the object to automatically input -->
-                <p><span id="price">"310k" </span><span id="prop-type">"single_family"</span></p>
-                <p><span id="bath">"x" Baths </span>-<span id="bed"> "x" Beds</span></p>
-                <p id="address">"Address"</p>
-                <br />
-                <!-- how do we ge tthe URL for this.. otherwise prob delete -->
-                <a href="*" id="details">Details</a>
-            </div>
-
-
-
-
-
+        <div class="cardContainer" id="cardContainer">
+            
         </div>
-
-
 
         <div class="Team">
             <p>
@@ -152,6 +108,13 @@
             </p>
         </div>
     </div>
+        
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+        <h3 class="title mb-5">Error</h3></div>
+      </div>
+      
 </body>
 
 </html>
