@@ -6,6 +6,7 @@
 
 body {
   background-color: #1d1d20;
+  height: 100vh;
 }
 
 .container {
@@ -185,5 +186,7 @@ button:hover {
   text-align: center;
   padding-top: 70px;
 }
+
+
 
 /*MADE BY SECTION ENDS*/
