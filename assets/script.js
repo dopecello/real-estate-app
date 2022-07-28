@@ -27,22 +27,51 @@ searchBtn.onclick = function getAPIData(event) {
 		stateCode +
 		'&city=' +
 		city +
-		'&limit=6&offset=0&sort=relevance' +
+		'&limit=18&offset=0&sort=relevance' +
 		'&beds_min=' +
 		beds
 		, options)
 		.then((res) => res.json())
 		.then((data) => {
 			let propertyListings = data.listings
-			// var propDivEl = [];
-			// var propImgEl = [];
+			var propDivEl = [];
+			var propImgEl = [];
+			var propDescripEl = [];
+			var bedBathEl = [];
+			var addressEl = [];
+			var breakEl = [];
+			var detailsLinkEl = [];
 			for (var i = 0; i < propertyListings.length; i++) {
 				const property = propertyListings[i]
-				console.log(property.address)
-				// propDivEl[i] = document.createElement("div");
-				// propDivEl.classList.add("card");
-				// var propImgEl = document.createElement("img");
-				// propImgEl
+				propDivEl[i] = document.createElement("div")
+				propDivEl[i].classList.add("card")
+				// adding image
+				propImgEl[i] = document.createElement("img")
+				propImgEl[i].src = property.photo
+				// adding price and type
+				propDescripEl[i] = document.createElement("p")
+				propDescripEl[i].innerText = property.price + " " + property.prop_type
+				// adding beds and baths
+				bedBathEl[i] = document.createElement("p")
+				bedBathEl[i].innerText = property.baths + " " + "Baths" + " " + "-" + " " + property.beds + " " + "Beds"
+				// adding address
+				addressEl[i] = document.createElement("p")
+				addressEl[i].innerText = property.address
+				//creating break
+				breakEl[i] = document.createElement("br")
+				//creating details link
+				detailsLinkEl[i] = document.createElement("a")
+				detailsLinkEl[i].href = property.rdc_web_url
+				detailsLinkEl[i].innerText = "Details"
+				// appending children
+				propDivEl[i].appendChild(propImgEl[i])
+				propDivEl[i].appendChild(propDescripEl[i])
+				propDivEl[i].appendChild(bedBathEl[i])
+				propDivEl[i].appendChild(addressEl[i])
+				propDivEl[i].appendChild(breakEl[i])
+				propDivEl[i].appendChild(detailsLinkEl[i])
+				// adding everything
+				cardContainer.appendChild(propDivEl[i])
 			}
 		})
 
@@ -51,12 +80,3 @@ searchBtn.onclick = function getAPIData(event) {
 	event.preventDefault();
 
 }
-	// `<div class="card">
-	// 			<img src=${listings.photo} alt="listings-image">
-	// 			<p><span id="price">${listings.price} </span><span id="prop-type">${listings.prop_type}</span></p>
-	// 			<p><span id="bath">${listings.baths} Baths </span>-<span id="bed"> ${listings.beds} Beds</span></p>
-	// 			<p id="address">${listings.address}</p>
-	// 			<br />
-	// 			<a href=${listings.rdc_web_url} id="details">Details</a>
-	// 			</div>`
-	// 		})
