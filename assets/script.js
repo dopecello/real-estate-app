@@ -1,7 +1,15 @@
 // UNIVERSAL SELECTORS
 const searchBtn = document.getElementById("searchBtn")
 const cardContainer = document.getElementById("cardContainer")
+const modalBg = document.querySelector('.modal-background')
+const modal = document.querySelector('.modal')
 
+//error modal
+modalBg.addEventListener('click', () => {
+	modal.classList.remove('is-active')
+})
+
+//API options
 const options = {
 	method: 'GET',
 	headers: {
@@ -10,11 +18,7 @@ const options = {
 	}
 };
 
-// let stateCode = 'FL'
-// let city = 'Miami'
-// let beds = '1'
-
-
+//fetch API function
 searchBtn.onclick = function getAPIData(event) {
 
 	let stateCode = document.getElementById("stateDropDown").value
@@ -27,7 +31,7 @@ searchBtn.onclick = function getAPIData(event) {
 		stateCode +
 		'&city=' +
 		city +
-		'&limit=18&offset=0&sort=relevance' +
+		'&limit=50&offset=0&sort=relevance' +
 		'&beds_min=' +
 		beds
 		, options)
@@ -45,6 +49,12 @@ searchBtn.onclick = function getAPIData(event) {
 				const property = propertyListings[i]
 				propDivEl[i] = document.createElement("div")
 				propDivEl[i].classList.add("card")
+				propDivEl[i].classList.add("has-text-centered")
+				propDivEl[i].classList.add("p-4")
+				propDivEl[i].classList.add("has-background-black-ter")
+				propDivEl[i].classList.add("m-6")
+				propDivEl[i].classList.add("has-text-white")
+				
 				// adding image
 				propImgEl[i] = document.createElement("img")
 				propImgEl[i].src = property.photo
@@ -75,21 +85,10 @@ searchBtn.onclick = function getAPIData(event) {
 			}
 		})
 
+
 		.catch(err => console.error(err));
 
 	event.preventDefault();
-
 }
 
-//error modal
-const theSearchBtn = document.getElementById("searchBtn")
-const modalBg = document.querySelector('.modal-background')
-const modal = document.querySelector('.modal')
 
-theSearchBtn.addEventListener('click',() => {
-	modal.classList.add('is-active')
-})
-
-modalBg.addEventListener('click', () => {
-	modal.classList.remove('is-active')
-})

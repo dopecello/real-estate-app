@@ -4,9 +4,12 @@
   padding: 0;
 }
 
+body {
+  background-color: #1d1d20;
+}
+
 .container {
   background-color: rgba(29, 29, 32);
-  height: 1200px;
 }
 
 /* HEADER START */
@@ -159,11 +162,17 @@ button:hover {
 /*BEDS QUANTITY SECTION ENDS*/
 
 /* CARDS SECTION START */
+/* .cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+} */
+
 .card {
   color: white;
   flex-wrap: wrap;
 }
-
+ 
 
 
 
