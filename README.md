@@ -5,7 +5,7 @@ Gives tons of valuable information and provides links to the properties listed i
 # Technologies Used
 -HTML, CSS(Bulma), JS
 
-#Screenshot
+# Screenshot
 ![Real Estate App](./assets/images/real-estate-app-ss.png)
 
 # Link to deployed app:
