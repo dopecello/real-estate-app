@@ -6,7 +6,7 @@
 
 body {
   background-color: #1d1d20;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .container {
@@ -141,6 +141,8 @@ font-family: sans-serif;
   margin-top: 10px;
 }
 
+
+
 button {
   background-color: green;
   color: white;
@@ -179,6 +181,7 @@ button:hover {
 
 /*MADE BY SECTION STARTS*/
 .Team {
+  /* width: 100vw; */
   font-size: 12px;
   font-family: sans-serif;
   font-weight: bold;

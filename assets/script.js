@@ -1,13 +1,18 @@
 // UNIVERSAL SELECTORS
 const searchBtn = document.getElementById("searchBtn")
 const cardContainer = document.getElementById("cardContainer")
+const searchContainer = document.getElementById("searchContainer")
 const modalBg = document.querySelector('.modal-background')
 const modal = document.querySelector('.modal')
+let locationArray = JSON.parse(localStorage.getItem("Searched-Locations")) || []
+
 
 //error modal
-modalBg.addEventListener('click', () => {
-	modal.classList.remove('is-active')
-})
+// modalBg.addEventListener('click', () => {
+// 	modal.classList.remove('is-active')
+// })
+
+
 
 //API options
 const options = {
@@ -18,11 +23,56 @@ const options = {
 	}
 };
 
+function saveSearchQuery() {
+	let state = document.getElementById("stateDropDown").value
+	let city = document.getElementById("searchCity").value
+	let cityStatePair = {
+		city,
+		state
+	}
+
+	locationArray = [...locationArray, cityStatePair]
+	localStorage.setItem("Searched-Locations", JSON.stringify(locationArray))
+}
+
+function displaySearchedLocations() {
+	let displayEl = []
+	let searchHistoryItemEl = []
+	let searchTitle = []
+
+	displayEl = document.createElement("div")
+	displayEl.classList.add("searchHistory")
+	searchTitle = document.createElement("h1")
+	searchTitle.classList.add("has-text-centered")
+	searchTitle.classList.add("has-text-white")
+	searchTitle.classList.add("title")
+	searchTitle.classList.add("is-2")
+	searchTitle.innerText = "Recent Searches"
+	displayEl.appendChild(searchTitle)
+
+	for (let i = 0; i < locationArray.length; i++) {
+		const locations = locationArray[i]
+		searchHistoryItemEl[i] = document.createElement("p")
+		searchHistoryItemEl[i].classList.add("has-text-centered")
+		searchHistoryItemEl[i].classList.add("has-text-white")
+		searchHistoryItemEl[i].innerText = "-" + " " + locations.city + "," + " " + locations.state
+		displayEl.appendChild(searchHistoryItemEl[i])
+		searchContainer.appendChild(displayEl)
+	}
+
+}
+
+
 //fetch API function
 searchBtn.onclick = function getAPIData(event) {
 
+	event.preventDefault();
+	saveSearchQuery()
+	displaySearchedLocations()
+
+
 	let stateCode = document.getElementById("stateDropDown").value
-	let city = document.getElementById("searchCity").value
+	let cityInput = document.getElementById("searchCity").value
 	let beds = document.getElementById("minBedsSelect").value
 
 	fetch(
@@ -30,7 +80,7 @@ searchBtn.onclick = function getAPIData(event) {
 		'state_code=' +
 		stateCode +
 		'&city=' +
-		city +
+		cityInput +
 		'&limit=50&offset=0&sort=relevance' +
 		'&beds_min=' +
 		beds
@@ -54,7 +104,7 @@ searchBtn.onclick = function getAPIData(event) {
 				propDivEl[i].classList.add("has-background-black-ter")
 				propDivEl[i].classList.add("m-6")
 				propDivEl[i].classList.add("has-text-white")
-				
+
 				// adding image
 				propImgEl[i] = document.createElement("img")
 				propImgEl[i].src = property.photo
@@ -88,7 +138,8 @@ searchBtn.onclick = function getAPIData(event) {
 
 		.catch(err => console.error(err));
 
-	event.preventDefault();
+
 }
+
 
 
