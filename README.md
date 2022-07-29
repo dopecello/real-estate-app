@@ -8,5 +8,5 @@ Gives tons of valuable information and provides links to the properties listed i
 #Screenshot
 ![Real Estate App](./assets/images/real-estate-app-ss.png)
 
-#Link to deployed app:
+# Link to deployed app:
 https://dopecello.github.io/real-estate-app/
